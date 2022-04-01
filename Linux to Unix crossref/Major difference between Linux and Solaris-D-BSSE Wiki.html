@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Major difference between Linux and Solaris - General IT Documentation - D-BSSE Wiki</title>
+
+        
+
+                        
+    
+                        
+    
+                        
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://wiki-bsse.ethz.ch">
+
+<meta id="atlassian-token" name="atlassian-token" content="f6437e98543e9509da4b4a0b03f5f5bddf487302">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="ITDOC">
+<script type="text/javascript">
+        var contextPath = '';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1493270089236">
+        
+    
+        
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-keyboardshortcut-hash" content="f1c490f01d5f48054a6968695d225bdb">
+            <meta name="ajs-is-space-admin" content=""> <meta name="ajs-has-space-config" content="">
+            <meta id="team-calendars-has-jira-link" content="true">
+            <meta name="ajs-team-calendars-display-time-format" content="displayTimeFormat12">
+            <meta id="team-calendars-user-timezone" content="Europe/Zurich">
+            <script type="text/x-template" id="team-calendars-messages" title="team-calendars-messages"><fieldset class="i18n hidden"><input type="hidden" name="calendar3.month.short.april" value="Apr"><input type="hidden" name="calendar3.month.short.november" value="Nov"><input type="hidden" name="calendar3.month.long.november" value="November"><input type="hidden" name="calendar3.day.short.friday" value="Fri"><input type="hidden" name="calendar3.month.long.february" value="February"><input type="hidden" name="calendar3.month.short.february" value="Feb"><input type="hidden" name="calendar3.day.long.wednesday" value="Wednesday"><input type="hidden" name="calendar3.month.long.december" value="December"><input type="hidden" name="calendar3.day.short.sunday" value="Sun"><input type="hidden" name="calendar3.month.long.april" value="April"><input type="hidden" name="calendar3.month.long.july" value="July"><input type="hidden" name="calendar3.month.long.september" value="September"><input type="hidden" name="calendar3.month.short.august" value="Aug"><input type="hidden" name="calendar3.month.short.june" value="Jun"><input type="hidden" name="calendar3.month.short.may" value="May"><input type="hidden" name="calendar3.day.short.tuesday" value="Tue"><input type="hidden" name="calendar3.day.short.wednesday" value="Wed"><input type="hidden" name="calendar3.day.long.thursday" value="Thursday"><input type="hidden" name="calendar3.month.long.march" value="March"><input type="hidden" name="calendar3.month.long.october" value="October"><input type="hidden" name="calendar3.day.short.saturday" value="Sat"><input type="hidden" name="calendar3.month.short.january" value="Jan"><input type="hidden" name="calendar3.month.long.may" value="May"><input type="hidden" name="calendar3.month.long.january" value="January"><input type="hidden" name="calendar3.month.short.october" value="Oct"><input type="hidden" name="calendar3.day.short.thursday" value="Thu"><input type="hidden" name="calendar3.day.long.friday" value="Friday"><input type="hidden" name="calendar3.day.long.sunday" value="Sunday"><input type="hidden" name="calendar3.month.long.june" value="June"><input type="hidden" name="calendar3.month.long.august" value="August"><input type="hidden" name="calendar3.day.long.tuesday" value="Tuesday"><input type="hidden" name="calendar3.day.long.saturday" value="Saturday"><input type="hidden" name="calendar3.month.short.september" value="Sep"><input type="hidden" name="calendar3.day.long.monday" value="Monday"><input type="hidden" name="calendar3.month.short.july" value="Jul"><input type="hidden" name="calendar3.month.short.march" value="Mar"><input type="hidden" name="calendar3.day.short.monday" value="Mon"><input type="hidden" name="calendar3.month.short.december" value="Dec"></fieldset></script>
+            
+
+    
+            
+    
+    
+            <meta name="ajs-page-id" content="10584993">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-page-title" content="Major difference between Linux and Solaris">
+            <meta name="ajs-parent-page-title" content="Solaris">
+            <meta name="ajs-parent-page-id" content="10584778">
+            <meta name="ajs-space-key" content="ITDOC">
+            <meta name="ajs-space-name" content="General IT Documentation">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-editor.loader.comment.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/79c2af74b871a8ac163bf4de66da38c6/_/download/contextbatch/css/comment-editor/batch.css&quot; media=&quot;all&quot;&gt;
+">
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="https://wiki-bsse.ethz.ch">
+            <meta name="ajs-version-number" content="5.5.2">
+            <meta name="ajs-build-number" content="5510">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-static-resource-url-prefix" content="/s/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="6442450944">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="f6437e98543e9509da4b4a0b03f5f5bddf487302">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="dd MMM yyyy">
+            <meta name="ajs-editor.loader.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/31202e89cdba2c43ea919b54ca9dcd6f/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/b4063470094eef76b3922da0f49ed480/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?build-number=5510&quot; media=&quot;all&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/31202e89cdba2c43ea919b54ca9dcd6f/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/b4063470094eef76b3922da0f49ed480/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?media=%28max-width%3A+1450px%29&amp;amp;build-number=5510&quot; media=&quot;(max-width: 1450px)&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/31202e89cdba2c43ea919b54ca9dcd6f/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/b4063470094eef76b3922da0f49ed480/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?media=print&amp;amp;build-number=5510&quot; media=&quot;print&quot;&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/31202e89cdba2c43ea919b54ca9dcd6f/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/b4063470094eef76b3922da0f49ed480/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?conditionalComment=lt+IE+9&amp;amp;build-number=5510&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;!--[if IE]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/31202e89cdba2c43ea919b54ca9dcd6f/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/b4063470094eef76b3922da0f49ed480/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?ieonly=true&amp;amp;build-number=5510&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/s/31202e89cdba2c43ea919b54ca9dcd6f/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/b4063470094eef76b3922da0f49ed480/_/download/contextbatch/js/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.js?build-number=5510&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="/s/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/s/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/osd.action" title="D-BSSE Wiki"/>
+
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-hipchat-integration-plugin:discovery-javascript-data.link-active"]="{\"linkActive\":true,\"conditionsMet\":true,\"admin\":false}";
+</script>
+<link type="text/css" rel="stylesheet" href="/s/7019e61e4b35bd0c80437361f3f3abfb/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/137/_/download/superbatch/css/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/137/_/download/superbatch/css/batch.css?media=print" media="print">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/f3536137ce5d3eb4ac8a7fddd4c1ac91/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/137/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/137/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+8" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/137/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/s/626eced7692e046320b691a8ec04df23/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/366a1d5708d9e7ef29e5b59ffd9b4610/_/download/contextbatch/css/atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general/batch.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/626eced7692e046320b691a8ec04df23/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/366a1d5708d9e7ef29e5b59ffd9b4610/_/download/contextbatch/css/atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/s/eed2dbddda169739425c5bffc44049d1/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/a36606ffe7a6d7e81c5c8a58b7ae0bfc/_/download/contextbatch/css/page/batch.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/eed2dbddda169739425c5bffc44049d1/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/a36606ffe7a6d7e81c5c8a58b7ae0bfc/_/download/contextbatch/css/page/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/8ebde49bf9b9c49ae66a646794ffd608/_/download/contextbatch/css/theme.doc/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/f3536137ce5d3eb4ac8a7fddd4c1ac91/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/1.5/_/download/batch/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/f3536137ce5d3eb4ac8a7fddd4c1ac91/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/1.5/_/download/batch/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<script type="text/javascript" src="/s/5961605921a59fba1ee9d6591f8730ee/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/137/_/download/superbatch/js/batch.js" ></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/137/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="/s/626eced7692e046320b691a8ec04df23/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/366a1d5708d9e7ef29e5b59ffd9b4610/_/download/contextbatch/js/atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general/batch.js" ></script>
+<script type="text/javascript" src="/s/eed2dbddda169739425c5bffc44049d1/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/a36606ffe7a6d7e81c5c8a58b7ae0bfc/_/download/contextbatch/js/page/batch.js" ></script>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/d1ebdce407db3357279dd6ae37eefdc3/_/download/contextbatch/js/atl.comments/batch.js" ></script>
+<script type="text/javascript" src="/s/f3536137ce5d3eb4ac8a7fddd4c1ac91/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/1.5/_/download/batch/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources.js" ></script>
+<script type="text/javascript" src="/s/f3536137ce5d3eb4ac8a7fddd4c1ac91/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/2.0.3/_/download/batch/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor.js" ></script>
+<link type="text/css" rel="stylesheet" href="/s/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/14/_/styles/colors.css?spaceKey=ITDOC" media="all">
+
+
+        
+        <meta name="verify-v1" content="Z4DVBEMaIX71Zo1mGhS98xfp2UXCMbwc7qF8dXVfmxk=" >
+<meta name="verify-v1" content="qf7dB7O5exy0ODRzZgXRnMUp4FkOLvBsnekdtHF7kOk=" >
+
+    
+                <link rel="canonical" href="https://wiki-bsse.ethz.ch/display/ITDOC/Major+difference+between+Linux+and+Solaris">
+        <link rel="shortlink" href="https://wiki-bsse.ethz.ch/x/oYOh">
+    <meta name="wikilink" content="[ITDOC:Major difference between Linux and Solaris]">
+    <meta name="page-version" content="15">
+
+</head>
+
+<body             onload="placeFocus()"
+     id="com-atlassian-confluence" class="theme-documentation  aui-theme-default aui-layout">
+
+        
+    <div id="full-height-container">
+    <div id="header-precursor">
+        <!-- Message Banner  
+<div style="background-color: yellow; border: 2px solid red; margin: 4px; padding: 2px; font-weight: bold; text-align: center;">
+Maintenance: Announcement text here
+</div>
+-->
+                    </div>
+
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class="aui-dropdown2-trigger app-switcher-trigger" aria-owns="app-switcher" aria-haspopup="true" tabindex="0"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default"><div class="app-switcher-loading">Loading&hellip;</div></div><script>
+            (function (NL) {
+                var initialise = function () {
+                    // For some milestones of AUI, the atlassian soy namespace was renamed to aui. Handle that here by ensuring that window.atlassian is defined.
+                    window.atlassian = window.atlassian || window.aui;
+                    new NL.AppSwitcher({
+                        dropdownContents: '#app-switcher'
+                    });
+                };
+                if (NL.AppSwitcher) {
+                    initialise();
+                } else {
+                    NL.onInit = initialise;
+                }
+            }(window.NL = (window.NL || {})));
+            window.NL.isUserAdmin = false</script></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="/"><img src="/s/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/_/images/logo/confluence-logo.png" alt="D-BSSE Wiki" /><span class="aui-header-logo-text">D-BSSE Wiki</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a  id="space-directory-link" href="/spacedirectory/view.action"  class=" aui-nav-imagelink"   title="Spaces">
+            <span>Spaces</span>
+    </a>
+        </li>
+                            <li id="browseMenu" role="menu">
+            
+    
+        <a id="browse-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="browse-menu-link-content" title="Browse">
+        <span class="browse">Browse</span>
+    </a>
+    <nav id="browse-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                    <strong></strong>
+                                <ul  id="browse-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+    
+            
+<a  id="space-pages-link" href="/pages/listpages.action?key=ITDOC" class="    "      title="Browse pages in the General IT Documentation space" >
+        Pages
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="space-blogposts-link" href="/pages/viewrecentblogposts.action?key=ITDOC" class="    "      title="Browse blogs in the General IT Documentation space" >
+        Blog
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="space-labels-link" href="/labels/listlabels-heatmap.action?key=ITDOC" class="    "      title="Browse labels in the General IT Documentation space" >
+        Labels
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="space-mail-link" href="/mail/archive/viewmailarchive.action?key=ITDOC" class="    "      title="Browse mail in the General IT Documentation space" >
+        Mail
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="space-advanced-link" href="/spaces/viewspacesummary.action?key=ITDOC" class="    "      title="Browse additional space functions in the General IT Documentation space" >
+        Space Operations
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+        </li>
+        </ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+            <li>
+        
+    
+            
+<a  id="doctheme-anchor" href="#"  class=" aui-nav-imagelink"   title="">
+            <span></span>
+    </a>
+    </li>
+                    <li>
+        <form id="quick-search" class="aui-quicksearch dont-default-focus header-quicksearch" action="/dosearchsite.action" method="get"><fieldset><label for="quick-search-query" class="assistive">Quick Search</label><input id="quick-search-query" class="text app-search search quick-search-query" type="text" accessKey="q" autocomplete="off" name="queryString" title="Quick Search" placeholder="Search" /><input id="quick-search-submit" class="quick-search-submit" type="submit" value="Search"/><div class="aui-dd-parent quick-nav-drop-down"></div></fieldset></form>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+        <span class="aui-icon aui-icon-small aui-iconfont-help">Help</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                    <strong></strong>
+                                <ul  id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a  id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-55/Getting+Help+And+Support" class="    "      title="Visit the Confluence documentation home"  target="_blank"
+>
+        Online Help
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="keyboard-shortcuts-link" href="#" class="    "      title="View available keyboard shortcuts" >
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="feed-builder-link" href="/dashboard/configurerssfeed.action" class="    "      title="Create your custom RSS feed." >
+        Feed Builder
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="whats-new-menu-link" href="https://docs.atlassian.com/confluence/docs-55/whatsnew/iframe" class="    "      title="" >
+        What’s new
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="gadget-directory-link" href="#" class="   user-item administration-link "      title="Browse gadgets provided by Confluence" >
+        Available Gadgets
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="confluence-about-link" href="/aboutconfluencepage.action" class="    "      title="Get more information about Confluence" >
+        About Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a  id="login-link" href="/login.action?os_destination=%2Fdisplay%2FITDOC%2FMajor%2Bdifference%2Bbetween%2BLinux%2Band%2BSolaris" class="   user-item login-link "      title="" >
+        Log in
+</a>
+</li>
+                        
+    </li>
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+
+    <div id="splitter">
+    <div id="splitter-sidebar" >
+        
+
+                    
+    
+
+
+<div class="plugin_pagetree">
+
+                        <div id="pagetreesearch">
+            <form method="POST" class="aui" action="/plugins/pagetreesearch/pagetreesearch.action" name="pagetreesearchform">
+                                    <input type="hidden" name="ancestorId" value="10584772">
+                                <input type="hidden" name="spaceKey" value="ITDOC">
+                <input type="text"  class="text medium-field" size="20" name="queryString">
+                <input type="submit" class="aui-button" value="Search">
+            </form>
+        </div>
+            
+        
+    <ul class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+        <div class="plugin_pagetree_children">
+        </div>
+    </ul>
+
+    <fieldset class="hidden">
+        <input type="hidden" name="treeId" value="">
+        <input type="hidden" name="treeRequestId" value="/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false&amp;expandCurrent=false">
+        <input type="hidden" name="treePageId" value="10584993">
+
+        <input type="hidden" name="noRoot" value="false">
+        <input type="hidden" name="rootPageId" value="10584772">
+
+        <input type="hidden" name="rootPage" value="">
+        <input type="hidden" name="startDepth" value="0">
+        <input type="hidden" name="spaceKey" value="ITDOC" >
+
+        <input type="hidden" name="i18n-pagetree.loading" value="Loading...">
+        <input type="hidden" name="i18n-pagetree.error.permission" value="Unable to load page tree. It seems that you do not have permission to view the root page.">
+        <input type="hidden" name="i18n-pagetree.eeror.general" value="There was a problem retrieving the page tree. Please check the server log file for more information.">
+        <input type="hidden" name="loginUrl" value="/login.action?os_destination=%2Fpages%2Fviewpage.action%3Ftitle%3DMajor%2Bdifference%2Bbetween%2BLinux%2Band%2BSolaris%26spaceKey%3DITDOC">
+        <input type="hidden" name="mobile" value="false">
+
+                <fieldset class="hidden">
+                                                <input type="hidden" name="ancestorId" value="10584778">
+                                    <input type="hidden" name="ancestorId" value="10584772">
+                                    </fieldset>
+    </fieldset>
+</div>
+
+
+
+            </div>
+    <div id="splitter-content">
+
+                    <script type="text/javascript" src="/s/en_GB/5510/701ab0bfc8a95d65a5559a923f8ed8badd272d36.24/5.5.2/_/download/resources/com.atlassian.confluence.plugins.doctheme:resources/doc-theme.js"></script>
+    
+                        
+            
+<div id="main"  class="aui-page-panel" >
+    <div id="main-header">
+        
+        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                    
+                    
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="action-menu" data-container="#navigation"><span><span>Tools</span></span></a>         <div id="action-menu" class="aui-dropdown2 aui-style-default">
+                            <ul  id="action-menu-primary"                     class="section-primary first aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a  id="view-attachments-link" href="/pages/viewpageattachments.action?pageId=10584993" rel="nofollow"  class="action-view-attachments"  accessKey="t"  title="View Attachments">
+                <span>A<u>t</u>tachments (0)</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a  id="action-view-history-link" href="/pages/viewpreviousversions.action?pageId=10584993" rel="nofollow"  class="action-view-history"   title="">
+                <span>Page History</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a  id="action-page-permissions-link" href="/pages/viewinfo.action?pageId=10584993" rel="nofollow"  class="action-page-permissions"   title="Edit restrictions">
+                <span>Restrictions</span>    </a>
+</li>
+                                </ul>
+                            <ul  id="action-menu-secondary"                     class="section-secondary aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a  id="view-page-info-link" href="/pages/viewinfo.action?pageId=10584993" rel="nofollow"  class="action-view-info"   title="">
+                <span>Page Information</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a  id="link-to-page-link" href="/pages/viewinfo.action?pageId=10584993" rel="nofollow"  class=""   title="Link to this Page">
+                <span>Link to this Page…</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a  id="view-in-hierarchy-link" href="/pages/listpages-dirview.action?key=ITDOC&amp;openId=10584993#selectedPageInHierarchy" rel="nofollow"  class=""   title="">
+                <span>View in Hierarchy</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a  id="action-view-source-link" href="/plugins/viewsource/viewpagesrc.action?pageId=10584993" rel="nofollow"  class="action-view-source popup-link"   title="">
+                <span>View Source</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a  id="action-export-pdf-link" href="/spaces/flyingpdf/pdfpageexport.action?pageId=10584993" rel="nofollow"  class=""   title="">
+                <span>Export to PDF</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a  id="action-export-word-link" href="/exportword?pageId=10584993" rel="nofollow"  class="action-export-word"   title="">
+                <span>Export to Word</span>    </a>
+</li>
+                                </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+        
+                <div id="title-heading" class="pagetitle with-breadcrumbs">
+        
+                                        
+                            <div id="breadcrumb-section">
+                    
+    
+    
+    <ol id="breadcrumbs">
+                    
+                
+        <li class="first" >
+                
+
+                    <span class=""><a href="/display/ITDOC">General IT Documentation</a></span>
+                            
+                
+        <li>
+                
+
+                    <span class=""><a href="/display/ITDOC/Home">Home</a></span>
+                            
+                
+        <li>
+                
+
+                    <span class=""><a href="/display/ITDOC/Solaris">Solaris</a></span>
+                </ol>
+
+
+                </div>
+            
+            <h1 id="title-text" class="with-breadcrumbs">
+                                        <a href="/display/ITDOC/Major+difference+between+Linux+and+Solaris">Major difference between Linux and Solaris</a>
+                            </h1>
+        </div>
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+
+<div id="content" class="page view">
+    
+
+<div id="action-messages">
+                        </div>
+
+
+
+        <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+    
+        <fieldset class="hidden parameters">
+            <input type="hidden" title="parentPageId" value="10584778">
+        </fieldset>
+
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+                            <li class="page-metadata-item noprint">
+
+    
+            
+                            
+    
+    
+    <a  id="content-metadata-page-restrictions" href="#" rel="nofollow"  class="hidden"   title="Restrictions apply">
+                    <img alt="" src="/download/resources/com.atlassian.confluence.plugins.confluence-page-banner:page-banner-resources/images/red_padlock.png" height="16" width="16" title="">
+                <span></span>    </a>
+</li>
+                        <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'>     <a href="    /display/~ryanj
+"
+                       class="url fn"
+                            >John Ryan</a></span>, last modified on <a class='last-modified' title='May 24, 2008 10:29' href='/pages/diffpagesbyversion.action?pageId=10584993&amp;selectedPageVersions=14&amp;selectedPageVersions=15'>May 24, 2008</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+        <fieldset class="hidden parameters">
+                        <input type="hidden" title="browsePageTreeMode" value="view">
+        </fieldset>
+
+        <div class="wiki-content">
+                           
+        <h1 id="MajordifferencebetweenLinuxandSolaris-Introduction">Introduction</h1>
+<p>Most readers coming here are more familiar with Linux than Solaris. This little page is designed to give those users some tips for running a Solaris box.<br />
+It is in no way intended as a definitive guide, and there may be lot better ways of doing things. Feel free to contribute.</p>
+
+<h2 id="MajordifferencebetweenLinuxandSolaris-ps">ps</h2>
+<p>ps -ef on Linux will give the full command line, but with Solaris you don't get it all. <br />
+This is particularly critical when looking at java processes. <br />
+Fortunately Solaris retains the BSD style binaries in /usr/ucb, so execute:</p>
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre> /usr/ucb/ps wwaux|grep java
+</pre>
+</div></div>
+<p>instead</p>
+
+<h2 id="MajordifferencebetweenLinuxandSolaris-bash">bash</h2>
+<p><code>/bin/sh</code> on Solaris <strong>is</strong> a POSIX complaint bourne shell. If you have written bash-centric scripts, replace <code>#!/bin/sh</code> with <code>#!/bin/bash</code></p>
+
+<h2 id="MajordifferencebetweenLinuxandSolaris-NFS">NFS</h2>
+
+<h3 id="MajordifferencebetweenLinuxandSolaris-StartingofNFSdaemon">Starting of NFS daemon</h3>
+
+<p>Instead of</p>
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre># service nfsserver start
+</pre>
+</div></div>
+
+<p>one does:</p>
+
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre># svcadm enable network/nfs/server
+</pre>
+</div></div>
+
+<h3 id="MajordifferencebetweenLinuxandSolaris-Exports">Exports</h3>
+
+<p>Instead of the file <code>/etc/exports</code>, under Solaris the file <code>/etc/dfs/dfstab</code> needs to be edited.</p>
+
+<h3 id="MajordifferencebetweenLinuxandSolaris-Sharingwithzfs">Sharing with zfs</h3>
+
+<p>Nowadays, you would probably use <code>zfs sharenfs</code> eg:</p>
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre># zfs set sharenfs=on zpool/sharedfolder
+# zfs sharenfs=rw=server.fqdn.ch,rw=otherserver.fqdn.ch zpool/sharedfolder
+</pre>
+</div></div>
+
+<h2 id="MajordifferencebetweenLinuxandSolaris-Anattemptatamatrix">An attempt at a matrix</h2>
+<div class="table-wrap"><table class="confluenceTable"><tbody>
+<tr>
+<th class="confluenceTh"><p> Linux command </p></th>
+<th class="confluenceTh"><p> Solaris similar command </p></th>
+<th class="confluenceTh"><p> Comments </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> top </p></td>
+<td class="confluenceTd"><p> prstat </p></td>
+<td class="confluenceTd"><p> You can compile top on Solaris, but you can't rely on it's accuracy </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> free </p></td>
+<td class="confluenceTd"><p> vmstat </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> cat /proc/meminfo </p></td>
+<td class="confluenceTd"><p> prtconf | grep Memory </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> cat /proc/cpuinfo </p></td>
+<td class="confluenceTd"><p> psrinfo -v </p></td>
+<td class="confluenceTd"><p> you can also use prtconf </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> netstat -p </p></td>
+<td class="confluenceTd"><p> lsof -i </p></td>
+<td class="confluenceTd"><p> lsof is not a default command. You need the package </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> uname -a </p></td>
+<td class="confluenceTd"><p> isainfo -b </p></td>
+<td class="confluenceTd"><p> to determine how many bits your os is </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> java -d64 </p></td>
+<td class="confluenceTd"><p> java -d64 </p></td>
+<td class="confluenceTd"><p> Start java with a default of 64 bit. Linux seems to do this by default though. </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> cat /etc/redhat-release </p></td>
+<td class="confluenceTd"><p> cat /etc/release</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> sysdef  </p></td>
+<td class="confluenceTd"><p> sysdef holds a lot of system info including kernel tunables </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> lsmod </p></td>
+<td class="confluenceTd"><p> modinfo </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> strace </p></td>
+<td class="confluenceTd"><p> truss </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+</tbody></table></div>
+
+
+<h2 id="MajordifferencebetweenLinuxandSolaris-Anothermatrix">Another matrix</h2>
+<div class="table-wrap"><table class="confluenceTable"><tbody>
+<tr>
+<th class="confluenceTh"><p> RHEL </p></th>
+<th class="confluenceTh"><p>	Solaris </p></th>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Shutdown </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> shutdown -h now (or) poweroff </p></td>
+<td class="confluenceTd"><p>	shutdown -y -g0 -i5 (or) init 5 </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> reboot 	</p></td>
+<td class="confluenceTd"><p> reboot (or) shutdown -y -g0 -i6 (or) init 6 </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> halt </p></td>
+<td class="confluenceTd"><p>	halt </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Kernel </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/lsmod 	</p></td>
+<td class="confluenceTd"><p> modinfo </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/insmod </p></td>
+<td class="confluenceTd"><p>	modload </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/rmmod </p></td>
+<td class="confluenceTd"><p>	modunload </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> scanpci 	</p></td>
+<td class="confluenceTd"><p> /usr/X11/bin/scanpci (or) prtconf -v </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Printing </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> lp (or) lpr 	</p></td>
+<td class="confluenceTd"><p> lp (or /usr/ucb/lpr) </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> lpstat (or) lpq 	</p></td>
+<td class="confluenceTd"><p> lpstat (or /usr/ucb/lpq) </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Services </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/service --status-all </p></td>
+<td class="confluenceTd"><p>	svcs -a </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/service sendmail stop </p></td>
+<td class="confluenceTd"><p>	svcadm disable sendmail </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/service sendmail start </p></td>
+<td class="confluenceTd"><p>	svcadm enable sendmail </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/service sendmail status </p></td>
+<td class="confluenceTd"><p>	svcs sendmail </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/chkconfig --list 	</p></td>
+<td class="confluenceTd"><p> svcs -a </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/chkconfig --add /etc/rc3.d/f00 </p></td>
+<td class="confluenceTd"><p>	svccfg import f00.xml </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/chkconfig sendmail on </p></td>
+<td class="confluenceTd"><p>	svcadm enable sendmail </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Monitoring </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> top </p></td>
+<td class="confluenceTd"><p>	prstat </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> cat /proc/cpuinfo 	</p></td>
+<td class="confluenceTd"><p> psrinfo -v </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> cat /proc/meminfo 	</p></td>
+<td class="confluenceTd"><p> prtconf </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> NFS </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> exportfs 	</p></td>
+<td class="confluenceTd"><p> exportfs (or) share  </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> (edit /etc/exports) </p></td>
+<td class="confluenceTd"><p>	share /home (or) zfs sharenfs=on </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> (edit /etc/exports) 	unshare /home (or) zfs sharenfs=off </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Networking </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/mii-tool </p></td>
+<td class="confluenceTd"><p>	ndd (or) /sbin/dladm show-dev </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> ifconfig 	</p></td>
+<td class="confluenceTd"><p> ifconfig -a </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/ethtool 	</p></td>
+<td class="confluenceTd"><p> ndd </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> /sbin/dhclient 	</p></td>
+<td class="confluenceTd"><p> dhcpagent </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> iptables 	</p></td>
+<td class="confluenceTd"><p> ipfilter </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Storage </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> fdisk 	 </p></td>
+<td class="confluenceTd"><p> fdisk (and) format </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> parted 	</p></td>
+<td class="confluenceTd"><p> format </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> mkfs -t ext3 /dev/hda1 </p></td>
+<td class="confluenceTd"><p>	mkfs -F ufs /dev/rdsk/c0t0d0s0 (or) newfs /dev/rdsk/c0t0d0s0 </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> cdrecord dev=2,0 f00.iso 	cdrw -i f00.iso </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> tar xfvj f00.tar.bz2 </p></td>
+<td class="confluenceTd"><p>	gtar xfvj f00.tar.bz2 </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> lvm/pv*/lv*/vg* 	</p></td>
+<td class="confluenceTd"><p> meta* </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p> Dev </p></th>
+</tr>
+<tr>
+<td class="confluenceTd"><p> (edit /etc/ld.so.conf) 	</p></td>
+<td class="confluenceTd"><p> crle </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> gcc 	</p></td>
+<td class="confluenceTd"><p> /opt/csw/bin/gcc </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> ld 	</p></td>
+<td class="confluenceTd"><p> /usr/ccs/bin/ld </p></td>
+</tr>
+</tbody></table></div>
+
+                
+        
+    
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="https://wiki-bsse.ethz.ch/display/ITDOC/Major+difference+between+Linux+and+Solaris"
+    dc:identifier="https://wiki-bsse.ethz.ch/display/ITDOC/Major+difference+between+Linux+and+Solaris"
+    dc:title="Major difference between Linux and Solaris"
+    trackback:ping="https://wiki-bsse.ethz.ch/rpc/trackback/10584993"/>
+</rdf:RDF>
+-->
+
+            
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="10584993" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            No labels
+        </li>
+            </ul>
+
+    </div>
+</div></div>
+
+            
+            
+
+
+
+
+            
+    
+
+
+
+
+
+
+
+
+                    
+    
+<div id="comments-section" class="pageSection group">
+    
+    
+    
+    
+            <div class="bottom-comment-panels comment-panels">
+                                    
+    
+
+
+    
+            </div>
+    
+    </div>
+
+
+            
+</div>
+
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+</div>
+  
+    </div>
+</div>
+
+
+        
+            
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">Powered by <a href="http://www.atlassian.com/software/confluence" class="hover-footer-link">Atlassian Confluence</a> <span id='footer-build-information'>5.5.2</span>, <a href="http://www.atlassian.com/software/confluence/overview/team-collaboration-software?utm_source=confluence-footer" class="hover-footer-link">Team Collaboration Software</a></li>
+            <li class="print-only">Printed by Atlassian Confluence 5.5.2, Team Collaboration Software.</li>
+            <li class="noprint"><a href="https://jira.atlassian.com/browse/CONF" class="hover-footer-link">Report a bug</a></li>
+            <li class="noprint"><a href="http://www.atlassian.com/about/connected.jsp?s_kwcid=Confluence-stayintouch" class="hover-footer-link">Atlassian News</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+            
+    </div>
+</body>
+</html>
